@@ -1,0 +1,264 @@
+:root{
+    --primary-color: #ff7833;
+    --secondary-color:#31333b;
+    --secondary-color-light: #444856;
+    --secondary-color-dark: #23252d;
+
+    --default-gap: 3rem;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    color: #e7e7e7;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+    background-image: url(../imagens/bg-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 4rem;
+    color:#a9a7a7;
+    margin-top: 3rem;
+}
+
+h2, h3, h4, h5, h6{
+    color: var(--primary-color);
+}
+
+h2{
+    margin-top: 1rem;
+}
+
+.highlight{
+    border-left:0.16em solid var(--primary-color);
+    font-size: 1.1em;
+    padding: 0 0 0 2em;
+    margin-bottom: 2.2em;
+}
+
+article{
+    padding-top: 1em;
+    padding-top: 1em;
+}
+
+section{
+    margin-bottom: 2rem;
+}
+
+.underline{
+    text-decoration: red wavy underline;
+}
+
+.main-header{
+    flex: 0 0 26rem;
+    background-color: rgba(49, 51, 59, 0.8);
+}
+
+.perfil-img{
+    max-width: 10rem;
+}
+
+.main{
+    background-color: var(--secondary-color-light);
+    background-color: rgba(141, 146, 165, 0.4);
+    flex: 1;
+    padding: 6.5rem 6rem 7.5rem;
+}
+
+a{
+    color: inherit;
+}
+
+.main, .main-header{
+    font-size: 1.6rem;
+}
+
+.main-nav{
+    text-align: right;
+    padding: 6.5rem 2.4rem 2.4rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.main-nav ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-nav li{
+    border-bottom: 0.16rem solid #7b7b7b;
+    padding: 0.4rem 0;
+}
+
+.main-nav ul a{
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    transition: padding-right 0.2s, background-color 0.4s;
+    background-color: transparent;
+}
+
+.main-nav ul a:hover, .main-nav ul a:focus{
+    background-color: var(--secondary-color-light);
+    padding-right: 1rem;
+}
+
+.card{
+    max-width: 370px;
+    background-color: var(--secondary-color);
+    padding: 0;
+}
+
+.card_content{
+    padding: 1em;
+}
+
+.card_content p, .card_title{
+    margin: 0;
+}
+
+.card_title{
+    font-size: 1.75em;
+    margin-bottom: 0.5em;
+}
+
+.card img{
+    max-width: 100%;
+}
+
+.row{
+    display: flex;
+    gap: var(--default-gap);
+    padding-top: 1.5rem;
+    justify-content: space-between;
+}
+
+.row .row{
+    padding-top: 0;
+}
+
+.row>* {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0%;
+}
+
+.alternate{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.alternate li{
+    padding: 0;
+}
+
+.alternate li:not(:last-child){
+    border-bottom: 0.1em solid;
+}
+
+.roman{
+    list-style-type: upper-roman;
+}
+
+.list-emoji{
+    list-style-type: "\1f642";
+}
+
+input, label, textarea, select{
+    display: inline-block;
+    width:100%;
+    box-sizing: border-box;
+}
+
+input[text="radio"], input[type="checkbox"]{
+    width: auto;
+}
+
+input, textarea, select{
+    background-color: #ccc;
+    padding: 1.2rem;
+    border-radius: 0.3em;
+    margin-bottom: 1.6rem;
+    border: 0;
+}
+
+.button{
+    background-color: var(--secondary-color);
+    border: 0.2rem solid var(--secondary-color-dark);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.8em 1.2em;
+    border-radius: 0.3rem;
+}
+
+.button + .button{
+    margin-left: 2rem;
+}
+
+button:hover, .button:focus{
+    background-color: var(--secondary-color-dark);
+}
+
+.button-stroke{
+    background-color: transparent;
+}
+
+.button-big{
+    font-size: 1.6rem;
+}
+
+.button-full{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button-full + .button-full{
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+.form-quiz{
+    width: calc(50% - var(--default-gap) / 2);
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td:last-child, .table th:last-child{
+    text-align: right;
+}
+
+.table td, table th{
+    padding: 1.6rem;
+}
+
+.table:not(.table-alternate) td, .table:not(.table-alternate) th{
+    border-bottom: 0.2rem solid var(--secondary-color-dark);
+}
+
+.table th{
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table-alternate tbody tr:nth-child(odd){
+    background-color: var(--secondary-color);
+}
+
+.table-verticalLines td:not(:last-child), .table-verticalLines th:not(:last-child){
+    border-right: 0.1rem solid var(--secondary-color-dark);
+}
